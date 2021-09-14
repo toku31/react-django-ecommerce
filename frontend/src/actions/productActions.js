@@ -29,8 +29,8 @@ import {
   } catch(error) {
     dispatch({ 
         type: PRODUCT_LIST_FAIL, 
-        payload: error.response && error.response.data.message
-            ? error.response.data.message
+        payload: error.response && error.response.data.detail // 39修正
+            ? error.response.data.detail // 39修正
             : error.message
       });
   }
@@ -44,8 +44,8 @@ export const listProductDetails = (id) => async (dispatch) => {
     dispatch({ type: PRODUCT_DETAILS_SUCCESS, payload: data });
   } catch(error){
     dispatch({ type: PRODUCT_DETAILS_FAIL, 
-      payload: error.response && error.response.data.message
-        ? error.response.data.message
+      payload: error.response && error.response.data.detail   // 39修正
+        ? error.response.data.detail　// 39修正
         : error.message
    });
   }
