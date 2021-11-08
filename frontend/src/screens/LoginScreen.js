@@ -35,7 +35,6 @@ function LoginScreen(props) {
   },[props.history, userInfo, redirect]);
 
   return (
-    <div>
       <FormContainer>
         <h1>Sign In</h1>
         <Form onSubmit={submitHandler}>
@@ -66,7 +65,6 @@ function LoginScreen(props) {
           </Row>
         </Form>
       </FormContainer>
-    </div>
   )
 }
 
